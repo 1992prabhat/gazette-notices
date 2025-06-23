@@ -1,0 +1,52 @@
+{#
+/**
+ * @file
+ * Template for displaying Gazette notices list.
+ *
+ * Available variables:
+ * - notices: Array of notice objects with title, content, published, and url.
+ */
+#}
+
+{{ attach_library('gazette_notices/gazette-notices') }}
+
+<section class="gazette-notices" aria-labelledby="gazette-notices-heading">
+  <h1 id="gazette-notices-heading" class="visually-hidden">{{ 'Gazette Notices'|t }}</h1>
+
+  {% if notices %}
+    <div class="gazette-notices__list">
+      {% for notice in notices %}
+        <article class="gazette-notice" role="article" aria-labelledby="notice-{{ loop.index }}-title">
+          <header class="gazette-notice__header">
+            <h2 id="notice-{{ loop.index }}-title" class="gazette-notice__title">
+              <a href="{{ notice.url }}"
+                 class="gazette-notice__link"
+                 aria-describedby="notice-{{ loop.index }}-date notice-{{ loop.index }}-content"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                {{ notice.title }}
+              </a>
+            </h2>
+            <time id="notice-{{ loop.index }}-date"
+                  class="gazette-notice__date"
+                  datetime="{{ notice.published|date('Y-m-d') }}">
+              {{ notice.published }}
+            </time>
+          </header>
+
+          {% if notice.content %}
+            <div id="notice-{{ loop.index }}-content"
+                 class="gazette-notice__content">
+              {{ notice.content|raw }}
+            </div>
+          {% endif %}
+        </article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="gazette-notices__empty">
+      <p>{{ 'No notices found.'|t }}</p>
+    </div>
+  {% endif %}
+</section>
+{{ pager }}

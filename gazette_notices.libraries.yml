@@ -1,0 +1,6 @@
+gazette-notices:
+  css:
+    theme:
+      css/gazette-notices.css: {}
+  dependencies:
+    - core/drupal

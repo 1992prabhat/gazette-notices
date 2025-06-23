@@ -1,0 +1,88 @@
+.gazette-notices {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.gazette-notices__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.gazette-notice {
+  padding: 1.5rem;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+.gazette-notice__title {
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem;
+}
+
+.gazette-notice__link {
+  text-decoration: none;
+  color: #007acc;
+  transition: color 0.2s;
+}
+
+.gazette-notice__link:hover,
+.gazette-notice__link:focus {
+  color: #005a9e;
+  text-decoration: underline;
+}
+
+.gazette-notice__date {
+  font-size: 0.875rem;
+  color: #666;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.gazette-notice__content {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.gazette-notices__empty {
+  text-align: center;
+  padding: 2rem;
+  color: #888;
+  font-style: italic;
+}
+
+/* Optional: Pagination styling */
+.pager {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.pager__items {
+  display: inline-flex;
+  list-style: none;
+  padding: 0;
+  gap: 0.5rem;
+}
+
+.pager__item {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  color: #007acc;
+  text-decoration: none;
+}
+
+.pager__item.is-active {
+  background: #007acc;
+  color: white;
+  font-weight: bold;
+  border-color: #005a9e;
+}

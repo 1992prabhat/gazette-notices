@@ -1,0 +1,5 @@
+gazette_notices.list:
+  title: 'Gazette Notices'
+  route_name: gazette_notices.list
+  parent: system.admin_content
+  description: 'View The Gazette notices.'

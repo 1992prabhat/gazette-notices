@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Gazette Notices module.
+ */
+
+use Drupal\Core\Datetime\DrupalDateTime;
+
+/**
+ * Implements hook_theme().
+ */
+function gazette_notices_theme() {
+  return [
+    'gazette_notices_list' => [
+      'variables' => [
+        'notices' => [],
+        'pager' => [],
+      ],
+      'template' => 'gazette-notices-list',
+    ],
+  ];
+}
+

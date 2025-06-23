@@ -1,0 +1,4 @@
+services:
+  gazette_notices.api_client:
+    class: Drupal\gazette_notices\Service\GazetteApiService
+    arguments: ['@http_client', '@logger.factory']
