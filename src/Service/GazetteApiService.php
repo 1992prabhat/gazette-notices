@@ -5,7 +5,6 @@ namespace Drupal\gazette_notices\Service;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
 use Drupal\Core\Logger\LoggerChannelFactoryInterface;
-use Drupal\Core\Logger\LoggerChannelInterface;
 
 /**
  * Service for interacting with The Gazette API.
