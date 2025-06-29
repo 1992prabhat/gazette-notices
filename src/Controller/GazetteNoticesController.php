@@ -16,7 +16,7 @@ class GazetteNoticesController extends ControllerBase {
   /**
    * The Gazette API client service.
    *
-   * @var \Drupal\gazette_notices\Service\GazetteApiClient
+   * @var \Drupal\gazette_notices\Service\GazetteApiService
    */
   protected $apiClient;
 
